@@ -8,10 +8,10 @@ import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
-import { CustomerComponent } from './users/customer/costumer/customer.component';
-import { CostomerComponent } from './users/costomer/costomer/costomer.component';
 import { StaffComponent } from './users/staff/staff/staff.component';
 import { ApproverComponent } from './users/approver/approver/approver.component';
+import { CustomerComponent } from './users/customer/customer/customer.component';
+import { RegistrationComponent } from './users/customer/registration/registration.component';
 
 @NgModule({
   declarations: [
@@ -21,10 +21,11 @@ import { ApproverComponent } from './users/approver/approver/approver.component'
     HeaderComponent,
     ContactComponent,
     AboutComponent,
-    CustomerComponent,
-    CostomerComponent,
+   
     StaffComponent,
-    ApproverComponent
+    ApproverComponent,
+    CustomerComponent,
+    RegistrationComponent
   ],
   imports: [
     BrowserModule,

@@ -1,2 +1,94 @@
 <p>home works!</p>
-<div style="padding: 300px; background-color: blueviolet;"class="container"></div>
+<div style="padding: 300px; background-color: blueviolet;" class="container">
+
+
+
+
+    <!-- <form [formGroup]="profileForm" (ngSubmit)="submit()"> -->
+    <form action="action_page.php" method="post">
+        <div class="imgcontainer">
+
+        </div>
+        <nav class="navbar">
+            <div class="container-fluid">
+                <div>
+                    <div>
+                        <a href="#">
+                            <img class="img" src="..\assets\bank_logo.jfif">
+                        </a>
+
+                        <div id="loginbox" style="margin-top:50px;"
+                            class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+                            <div class="panel panel-info">
+                                <div class="panel-heading">
+                                    <div class="panel-title">Sign In</div>
+                                    <div style="float:right; font-size: 80%; position: relative; top:-10px"><a
+                                            href="#">Forgot password?</a></div>
+                                </div>
+
+                                <div style="padding-top:30px" class="panel-body">
+
+                                    <!-- <form [formGroup]="profileForm" (ngSubmit)="submit()" id="loginform" class="form-horizontal" role="form"> -->
+                                    <form id="loginform" class="form-horizontal" role="form"></form>
+
+                                    <div style="margin-bottom: 25px" class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                        <input id="login-username" type="text" class="form-control" name="username"
+                                            value="" placeholder="username or email">
+                                    </div>
+
+                                    <div style="margin-bottom: 25px" class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                        <input id="login-password" type="password" class="form-control" name="password"
+                                            placeholder="password">
+                                    </div>
+
+                                    <div class="input-group">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input id="login-remember" type="checkbox" name="remember" value="1">
+                                                Remember me
+                                            </label>
+                                        </div>
+                                    </div>
+
+
+                                    <div style="margin-top:10px" class="form-group">
+                                        <!-- Button -->
+
+                                        <div class="col-sm-12 controls">
+                                            <a id="btn-login" href="#" class="btn btn-success">Login </a>
+
+                                        </div>
+                                    </div>
+
+
+                                    <div class="form-group">
+                                        <div class="col-md-12 control">
+                                            <div style="border-top: 1px solid#888; padding-top:15px; font-size:85%">
+                                                Don't have an account!
+                                                <h4 style="font-size: 15px"><a href="/register">Register Here!</a></h4>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+    </form>
+
+
+
+</div>
+
+
+
+
+
+<!-- //{{mystatus}} -->
