@@ -1,0 +1,59 @@
+<div>
+    <!-- to be inplemented with motivational phrases for every day-->
+
+    <div [ngSwitch]="dateToday">
+        <div *ngSwitchCase="0">
+            <h1>Sunday</h1>
+        </div>
+        <div *ngSwitchCase="1">
+            <h1>Monday</h1>
+        </div>
+        <div *ngSwitchCase="2">
+            <h1>Tuesday</h1>
+        </div>
+        <div *ngSwitchCase="3">
+            <h1>Wednesday</h1>
+        </div>
+        <div *ngSwitchCase="4">
+            <h1>Thursday</h1>
+        </div>
+        <div *ngSwitchCase="5">
+            <h1>Friday</h1>
+        </div>
+        <div *ngSwitchCase="6">
+            <h1>Saturday</h1>
+        </div>
+    </div>
+
+
+</div>
+<div style="margin-top: 3em;" class="container">
+    <div class="row">
+        <div class="col-md-6 order-1">
+            <div class="card  p-3 mb-5 bg-body rounded" style="width: 100%;">
+
+                <img src="assets/add-staff.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">New staff?</h5>
+                    <p class="card-text">Click here to get access to a form to add a new staff to your team... </p>
+                    <a href="/approver/createstaff" class="btn btn-primary">Add new staff</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 order-2">
+            <div class="card p-3 mb-5 bg-body rounded">
+                                <!-- <p class="card-img-top fw-bold" style="font-size: 9.99em;"> <button type="button " style="font-size: inherit;" class="btn btn-success"><i
+                    class="bi bi-person-check"></i> </button> | <button type="button" class="btn btn-danger" style="font-size: inherit;"><i
+                    class="bi bi-person-x"></i></button></p> -->
+                <img src="assets/manage-staff.png" class="card-img-top" style="margin: 1.5em 0;" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Staff Management</h5>
+                    <p class="card-text">Click here to manage your staff team, you can enable and disable who can login
+                        in the system!</p>
+                    <a href="/approver/managestaff" class="btn btn-primary">Management tool</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

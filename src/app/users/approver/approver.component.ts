@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./approver.component.css']
 })
 export class ApproverComponent implements OnInit {
-
+  dateToday: any;
+  name: any;
   constructor() { }
 
   ngOnInit(): void {
+    this.dateToday = new Date().getDay();
   }
 
 }

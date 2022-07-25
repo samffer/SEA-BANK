@@ -1,0 +1,31 @@
+<div class="container" style="padding: 5em; background: radial-gradient(black, white ) no-repeat;">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4 ">
+            <div class="form-bg">
+                <div class="row">
+                    <div class="form-container">
+                        <form [formGroup]="approverLoginForm" class="form-horizontal" (ngSubmit)="submit()">
+                            <h3 class="title">Manager login</h3>
+                            <p style="color: red;">{{errMsg}}</p>
+                            <div class="form-group">
+                                <span class="input-icon"><i class="fa fa-user"></i></span>
+                                <input class="form-control" type="email" placeholder="Username" name="username"
+                                    formControlName="username">
+                            </div>
+                            <div class="form-group">
+                                <span class="input-icon"><i class="fa fa-lock"></i></span>
+                                <input class="form-control" type="password" placeholder="Password" name="password"
+                                    formControlName="password">
+                            </div>
+                            <button type="submit" class="btn signin">Login</button>
+                            <span class="forgot-pass"><a href="#">Lost password?</a></span>
+                            <span class="register"><a href="mailto:techsupport@seabank.com">Technical Support</a></span>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+</div>

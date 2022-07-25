@@ -25,12 +25,11 @@
   }
   
   .btn{
-    color: rgb(25, 124, 229);
+    color: rgb(255, 255, 255);
   }
   
   .btn:hover{
-    color: white;
-    border-bottom: 2px solid white;    
+    color: rgb(155, 170, 67);
   }
   
   .btn1{

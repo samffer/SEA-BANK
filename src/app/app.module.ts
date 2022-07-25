@@ -9,9 +9,15 @@ import { HeaderComponent } from './header/header.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { StaffComponent } from './users/staff/staff/staff.component';
-import { ApproverComponent } from './users/approver/approver/approver.component';
+import { ApproverComponent } from './users/approver/approver.component';
 import { CustomerComponent } from './users/customer/customer/customer.component';
 import { RegistrationComponent } from './users/customer/registration/registration.component';
+import { CreatestaffComponent } from './users/approver/createstaff/createstaff.component';
+import { ManagestaffComponent } from './users/approver/managestaff/managestaff.component';
+import { ApproverloginComponent } from './users/approver/approverlogin/approverlogin.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -21,15 +27,23 @@ import { RegistrationComponent } from './users/customer/registration/registratio
     HeaderComponent,
     ContactComponent,
     AboutComponent,
-   
+
     StaffComponent,
     ApproverComponent,
     CustomerComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    CreatestaffComponent,
+    ManagestaffComponent,
+    ApproverloginComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

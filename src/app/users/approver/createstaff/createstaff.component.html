@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="row" style="margin: 2em 0;">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8 shadow-lg p-3 mb-5 bg-body rounded">
+      <div class="d-grid gap-2">
+        <button type="button" class="btn btn-secondary" disabled>Create new employee ID</button>
+        <button type="button" class="btn btn-dark" style="justify-content: end;"><a href="/approver/managestaff"
+            class="text-decoration-none"> View Staffs</a></button>
+      </div>
+      <form [formGroup]="approverCreateStaffForm" (ngSubmit)="submit()">
+        <div class="mb-3">
+          <label for="formGroupExampleInput" class="form-label">Name</label>
+          <input type="text" class="form-control" placeholder="Enter Staff Name" name="password" formControlName="name">
+        </div>
+        <div class="mb-3">
+          <label for="formGroupExampleInput2" class="form-label">User Name</label>
+          <input type="text" class="form-control" placeholder="Enter Staff UserName" name="username"
+            formControlName="username">
+        </div>
+        <div class="mb-3">
+          <label for="formGroupExampleInput2" class="form-label">Password</label>
+          <input type="password" class="form-control" placeholder="Enter Secure Password" name="password"
+            formControlName="password">
+        </div>
+        <div class="mb-3">
+          <label for="formGroupExampleInput2" class="form-label">Re enter Password</label>
+          <input type="password" class="form-control" placeholder="Re Enter Password" name="repassword"
+            formControlName="repassword">
+        </div>
+        <p style="color: red;">{{errPass}}</p>
+        <button class="btn btn-primary" type="submit">Create</button>
+      </form>
+    </div>
+    <div class="col-md-2">
+    </div>
+  </div>
+</div>
