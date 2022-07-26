@@ -7,6 +7,7 @@ import { ApproverComponent } from './users/approver/approver.component';
 import { ApproverloginComponent } from './users/approver/approverlogin/approverlogin.component';
 import { CreatestaffComponent } from './users/approver/createstaff/createstaff.component';
 import { ManagestaffComponent } from './users/approver/managestaff/managestaff.component';
+import { StaffComponent } from './users/staff/staff/staff.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'approver', component: ApproverComponent},
+  { path: 'staff', component: StaffComponent},
   { path: 'approver/approverlogin', component: ApproverloginComponent},
   { path: 'approver/createstaff', component: CreatestaffComponent},
   { path: 'approver/managestaff', component: ManagestaffComponent}
