@@ -1,0 +1,25 @@
+<div class='bold-line'></div>
+<div class='container'>
+    <div style="padding: 2em;">
+        <div class='window'>
+            <div class='overlay'></div>
+            <div class='content'>
+                <b>
+                    <div class='welcome'>STAFF LOGIN</div>
+                </b>
+                <form [formGroup]="staffLoginForm" class="form-horizontal" (ngSubmit)="submit()">
+                    <div class='input-fields'>
+
+                        <input type='text' placeholder='Username' class='input-line full-width' name="username" formControlName="username">>
+
+                        <input type='password' placeholder='Password' class='input-line full-width' name="password" formControlName="password">>
+                        <p style="color: red;">{{errMsg}}</p>
+
+                    </div>
+
+                    <div><button type="submit" class='ghost-round full-width'>Login</button></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

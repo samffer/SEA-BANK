@@ -8,7 +8,6 @@ import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
-import { StaffComponent } from './users/staff/staff/staff.component';
 import { ApproverComponent } from './users/approver/approver.component';
 import { CustomerComponent } from './users/customer/customer/customer.component';
 import { RegistrationComponent } from './users/customer/registration/registration.component';
@@ -17,6 +16,8 @@ import { ManagestaffComponent } from './users/approver/managestaff/managestaff.c
 import { ApproverloginComponent } from './users/approver/approverlogin/approverlogin.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { StaffLoginComponent } from './users/staff/staff-login/staff-login.component';
+import { StaffDashboardComponent } from './users/staff/staff-dashboard/staff-dashboard.component';
 
 
 @NgModule({
@@ -28,13 +29,14 @@ import { HttpClientModule } from '@angular/common/http';
     ContactComponent,
     AboutComponent,
 
-    StaffComponent,
     ApproverComponent,
     CustomerComponent,
     RegistrationComponent,
     CreatestaffComponent,
     ManagestaffComponent,
-    ApproverloginComponent
+    ApproverloginComponent,
+    StaffLoginComponent,
+    StaffDashboardComponent,
   ],
   imports: [
     BrowserModule,

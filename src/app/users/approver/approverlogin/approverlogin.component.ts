@@ -27,7 +27,7 @@ export class ApproverloginComponent implements OnInit {
     this.approver.username = this.f['username'].value
 
     this.approverservice.checkCredentials(this.approver)
-      .subscribe(data => {
+    .subscribe(data => {
         console.log(data)
         this.router.navigate(["/approver"])
       }
