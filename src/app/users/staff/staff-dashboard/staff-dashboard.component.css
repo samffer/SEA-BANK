@@ -1,18 +1,137 @@
 .bordered {
-    width: 50em;
-    height: 35em;
-    padding: 2em;
-    padding-top: 6em;
+  width: 50em;
+  height: 35em;
+  padding: 2em;
+  padding-top: 6em;
 
-    border: 5px solid rgb(8, 108, 154);
-  }
+  border: 5px solid rgb(8, 108, 154);
+}
 
-  .sub_border{
-    width: 13em;
-    height: 5em;
-    padding-left: 2em;
-    padding-top: 1em;
-    border: 2px solid rgb(8, 108, 154);
-    border-radius: 8px;
+.sub_border {
+  width: 13em;
+  height: 5em;
+  padding-left: 2em;
+  padding-top: 1em;
+  border: 2px solid rgb(8, 108, 154);
+  border-radius: 8px;
 
-  }
+}
+
+div {
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 8px 5px;
+}
+
+tr:nth-child(even) {
+  background-color: #69f0d0;
+}
+
+tr:nth-child(odd) {
+  background-color: #2d7f88;
+}
+
+.alert {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+
+checkbox {
+  padding: 20px;
+}
+
+.bordered {
+  width: 50em;
+  height: 35em;
+  padding: 2em;
+  padding-top: 6em;
+
+  border: 5px solid rgb(8, 108, 154);
+}
+
+div {
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 8px 5px;
+}
+
+tr:nth-child(even) {
+  background-color: #69f0d0;
+}
+
+tr:nth-child(odd) {
+  background-color: #2d7f88;
+}
+
+.alert {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+
+#Check1 {
+  padding-left: 2em;
+}
+
+.bordered {
+  width: 50em;
+  height: 35em;
+  padding: 2em;
+  padding-top: 6em;
+
+  border: 5px solid rgb(8, 108, 154);
+}
+
+#transfer {
+  background-color: rgb(37, 114, 165);
+  color: aliceblue;
+}

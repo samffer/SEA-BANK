@@ -1,77 +1,304 @@
-<h1>add beneficiary</h1>
-<div class="container ">
-    <div class="row justify-content-md-center">
-      <div class="col col-lg-2 bordered ">
-        <h2>Customer Links</h2>
-<br>
-     <a href="createAccount">  <h5>Create Account</h5></a> 
+<div class="container">
+    <div class='card'>
+        <div class='card-header'>
+            <h1>Client Dash Board</h1>
+        </div>
+        <div class="card-body">
+            <div class="row justify-content-start">
+                <div class="col-2 align-self-center">
+                    <div class="row">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input btn-check" type="radio" id="inlineRadio1"
+                                name="cancel_associated_session" [(ngModel)]="num" [value]="1" />
+                            <label class="btn btn-outline-primary" type="button" for="inlineRadio1">
+                                <h3>Create Account</h3>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input btn-check" type="radio" id="inlineRadio2"
+                                name="cancel_associated_session" [(ngModel)]="num" [value]="2" />
+                            <label class="btn btn-outline-primary" type="button" for="inlineRadio2">
+                                <h3>Add Beneficiary</h3>
+                            </label>
 
-     <a href="addBeneficiary">  <h5>Add Beneficiary</h5></a> 
-<a href="removeBeneficiary">  <h5>Remove Beneficiary</h5></a> 
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input btn-check" type="radio" id="inlineRadio3"
+                                name="cancel_associated_session" [(ngModel)]="num" [value]="3" />
+                            <label class="btn btn-outline-primary" type="button" for="inlineRadio3">
+                                <h3>Remove Beneficiary</h3>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row">
 
-<a href="transferMoney">  <h5>Transfer Money</h5></a> 
-<a href="viewStatement">  <h5>View Statement</h5></a> 
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input btn-check" type="radio" id="inlineRadio4"
+                                name="cancel_associated_session" [(ngModel)]="num" [value]="4" />
+                            <label class="btn btn-outline-primary" type="button" for="inlineRadio4">
+                                <h3>Transfer Money</h3>
+                            </label>
 
-      </div>
-      <div class="col-md-auto bordered">
-        <h2>Account List</h2>
-        <br>
-        <br>
-        <input type="checkbox">
-        <br>
-        <br>
+                        </div>
+                    </div>
 
-      </div>
-      
-    </div>
-    
-  </div>
+                    <div class="row">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input btn-check" type="radio" id="inlineRadio5"
+                                name="cancel_associated_session" [(ngModel)]="num" [value]="5" />
+                            <label class="btn btn-outline-primary" type="button" for="inlineRadio5">
+                                <h3>View Statement</h3>
+                            </label>
 
-  <h1>create account</h1>
-  <form class="container bordered">
-    <div class="form-group">
-      <label for="inputnumbers"><a style="font-size: 19px;  text-underline-position: below; text-decoration: underline;">Create Account Form</a></label>
-      <input type="number" class="form-control" id="initialDeposit" placeholder="Enter Initial Deposit!">
-      <small id="depositHelp" class="form-text text-muted">We'll never share your information with anyone else.</small>
-    </div>
-    <div class="form-group">
-      <label for="selection">Select Types of Account</label>
-     <div class="sub_border">
-    <div class="form-check">
-      <input type="checkbox" class="form-check-input" id="saving">
-      <label class="form-check-label" for="savingAccount">Saving Bank</label>
-    </div>
-    <div class="form-check">
-       <input type="checkbox" class="form-check-input" id="activeAcc">
-        <label class="form-check-label" for="currrentAccount">Current Account</label>
-      </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="col-10">
+
+                    <div [ngSwitch]="num">
+                        <div *ngSwitchCase="'1'">
+                            <h1>Create Account</h1>
+                            <form class="container bordered">
+                                <div class="form-group">
+                                    <label for="inputnumbers"><a
+                                            style="font-size: 19px;  text-underline-position: below; text-decoration: underline;">Create
+                                            Account Form</a></label>
+                                    <input type="number" class="form-control" id="initialDeposit"
+                                        placeholder="Enter Initial Deposit!">
+                                    <small id="depositHelp" class="form-text text-muted">We'll never share your
+                                        information
+                                        with anyone else.</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="selection">Select Types of Account</label>
+                                    <div class="sub_border">
+                                        <div class="form-check">
+                                            <input type="checkbox" class="form-check-input" id="saving">
+                                            <label class="form-check-label" for="savingAccount">Saving Bank</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="checkbox" class="form-check-input" id="activeAcc">
+                                            <label class="form-check-label" for="currrentAccount">Current
+                                                Account</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary"
+                                    style="margin-left: auto; margin-right: 0;">Submit</button>
+
+                            </form>
+
+                        </div>
+                        <div *ngSwitchCase="'2'">
+                            <h1>Add Beneficiary</h1>
+                            <form class="container bordered">
+                                <div class="form-group">
+                                    <label for="inputnumbers"><a
+                                            style="font-size: 19px;  text-underline-position: below; text-decoration: underline;">Add
+                                            Beneficiary</a></label>
+                                    <input type="number" class="form-control" id="initialDeposit_b"
+                                        placeholder="Enter Initial Deposit!">
+                                    <small id="depositHelp" class="form-text text-muted">We'll never share your
+                                        information
+                                        with anyone else.</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="selection">Select Types of Account</label>
+                                    <div class="sub_border">
+                                        <div class="form-check">
+                                            <input type="checkbox" class="form-check-input" id="saving">
+                                            <label class="form-check-label" for="savingAccount_b">Saving Bank</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="checkbox" class="form-check-input" id="activeAcc">
+                                            <label class="form-check-label" for="currrentAccount_b">Current
+                                                Account</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </form>
+
+                        </div>
+                        <div *ngSwitchCase="'3'">
+                            <h1>Remove Beneficiary</h1>
+                            <div class="container">
+
+
+                                <h2>Here is the list of your Beneficiaries:</h2>
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Account No</th>
+                                            <th>Name</th>
+                                            <th>Delete Beneficiary</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- <tr *ngFor="let user of users">
+                                          <th scope="row">#</th>
+                                          <td>{{ user.id }}</td>
+                                          <td>{{user.name }}</td>
+                                          <td>{{ user.phone}}</td>
+                                          <td>{{ user.email }}</td>
+                                         <td> <button class="btn btn-danger btn-rounded" (click)="deleteUser(user.id)"> Delete User</button></td>
+                                         
+                                      </tr> -->
+                            
+                                        <tr>
+                            
+                            
+                                            <td>001111111</td>
+                                            <td>Frank</td>
+                                            <td><a href="removeBeneficiary"> <span style='font-size:20px;'>&#9940;</span></a></td>
+                            
+                            
+                                        </tr>
+                                        <tr>
+                                            <td>001111112</td>
+                                            <td>Frank</td>
+                                            <td><a href="removeBeneficiary"> <span style='font-size:20px;'>&#9940;</span></a></td>
+                            
+                            
+                            
+                                        </tr>
+                                        <tr>
+                            
+                                            <td>001111113</td>
+                                            <td>Frank</td>
+                                            <td><a href="removeBeneficiary"> <span style='font-size:20px;'>&#9940;</span></a></td>
+                            
+                            
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                        <div *ngSwitchCase="'4'">
+                            <h1>TransferMoney</h1>
+                            <div class="container">
+                                <h4>Here is the list of your Accounts:</h4>
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Account No</th>
+                                            <th>Balance</th>
+                                            <th>Acc. Type</th>
+                                            <th>Select</th>
+                            
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- <tr *ngFor="let user of users">
+                                            <th scope="row">#</th>
+                                            <td>{{ user.id }}</td>
+                                            <td>{{user.name }}</td>
+                                            <td>{{ user.phone}}</td>
+                                            <td>{{ user.email }}</td>
+                                           <td> <button class="btn btn-danger btn-rounded" (click)="deleteUser(user.id)"> Delete User</button></td>
+                                           
+                                        </tr> -->
+                            
+                                        <tr>
+                            
+                            
+                                            <td>001111111</td>
+                                            <td>USD: 3000</td>
+                                            <td>SB</td>
+                                            <td>
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="Check1">
+                                                    <label class="form-check-label" for="exampleCheck1"></label>
+                                                </div>
+                                            </td>
+                            
+                            
+                                        </tr>
+                                        <tr>
+                                            <td>001111112</td>
+                                            <td>USD: 32000</td>
+                                            <td>SB</td>
+                                            <td>
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="Check1">
+                                                    <label class="form-check-label" for="exampleCheck1"></label>
+                                                </div>
+                                            </td>
+                            
+                            
+                                        </tr>
+                                        <tr>
+                            
+                                            <td>001111113</td>
+                                            <td>USD: 45000</td>
+                                            <td>CA</td>
+                                            <td>
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="Check1">
+                                                    <label class="form-check-label" for="exampleCheck1"></label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="form-row">
+                                    <div class="form-group col-md-4">
+                                        <label for="inputState">Select to Account</label>
+                                        <select id="inputaccount" class="form-control">
+                                            <option selected>Choose...</option>
+                                            <option>A/C</option>
+                                            <option>S/A</option>
+                                        </select>
+                            
+                                    </div>
+                                    <div class="form-group col-md-8">
+                                        <label for="inputamount">Amount</label>
+                                        <input type="number" class="form-control" placeholder="Enter Amount" id="inputamount">
+                                    </div>
+                                </div>
+                                <div class="form-group col-sm">
+                                    <input type="text" class="form-control" id="inputReason" placeholder="Reason">
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                            
+                                    </div>
+                                    <div class="form-group col-md-4">
+                            
+                                    </div>
+                                    <div class="form-group col-md-2">
+                                        <button type="submit" class="form-control" id="transfer">Submit</button>
+                                    </div>
+                                </div>
+                            
+                            
+                            
+                            </div>
+
+                        </div>
+                        <div *ngSwitchCase="'5'">
+                            <h1>View Statement</h1>
+                            <!-- HERE -->
+
+                        </div>
+                        <div *ngSwitchDefault>
+                            <h2>Welcome To our Valued Costumer!</h2>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+
     </div>
 </div>
-
-    <button type="submit" class="btn btn-primary"  style="margin-left: auto; margin-right: 0;">Submit</button>
-
-  </form>
-
-  <h1>add beneficiary</h1>
-
-  <form class="container bordered">
-    <div class="form-group">
-      <label for="inputnumbers"><a style="font-size: 19px;  text-underline-position: below; text-decoration: underline;">Add Beneficiary</a></label>
-      <input type="number" class="form-control" id="initialDeposit_b" placeholder="Enter Initial Deposit!">
-      <small id="depositHelp" class="form-text text-muted">We'll never share your information with anyone else.</small>
-    </div>
-    <div class="form-group">
-      <label for="selection">Select Types of Account</label>
-     <div class="sub_border">
-    <div class="form-check">
-      <input type="checkbox" class="form-check-input" id="saving">
-      <label class="form-check-label" for="savingAccount_b">Saving Bank</label>
-    </div>
-    <div class="form-check">
-       <input type="checkbox" class="form-check-input" id="activeAcc">
-        <label class="form-check-label" for="currrentAccount_b">Current Account</label>
-      </div>
-    </div>
-</div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </form>

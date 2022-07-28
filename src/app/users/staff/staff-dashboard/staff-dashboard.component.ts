@@ -8,8 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class StaffDashboardComponent implements OnInit {
 
   constructor() { }
-
+  num: any
+  
   ngOnInit(): void {
   }
-
+  
 }
