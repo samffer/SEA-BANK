@@ -9,7 +9,7 @@ import { HeaderComponent } from './header/header.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { ApproverComponent } from './users/approver/approver.component';
-import { CustomerComponent } from './users/customer/customer/customer.component';
+import { CustomerComponent } from './users/customer/customer-dashboard/customer.component';
 import { RegistrationComponent } from './users/customer/registration/registration.component';
 import { CreatestaffComponent } from './users/approver/createstaff/createstaff.component';
 import { ManagestaffComponent } from './users/approver/managestaff/managestaff.component';

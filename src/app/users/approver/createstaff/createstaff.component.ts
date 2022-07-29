@@ -30,7 +30,10 @@ export class CreatestaffComponent implements OnInit {
       this.staffService.createStaff(this.staff).subscribe(data => {
         console.log(data)
         this.router.navigate(["/approver/managestaff"])
-      }, err => { console.log(err) })
+      }, err => { 
+        console.log(err);
+        this.errPass = err.error.message
+      })
     } else {
       this.errPass = "Password Mismatch"
       return

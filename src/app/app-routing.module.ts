@@ -7,6 +7,7 @@ import { ApproverComponent } from './users/approver/approver.component';
 import { ApproverloginComponent } from './users/approver/approverlogin/approverlogin.component';
 import { CreatestaffComponent } from './users/approver/createstaff/createstaff.component';
 import { ManagestaffComponent } from './users/approver/managestaff/managestaff.component';
+import { CustomerComponent } from './users/customer/customer-dashboard/customer.component';
 import { RegistrationComponent } from './users/customer/registration/registration.component';
 import { StaffDashboardComponent } from './users/staff/staff-dashboard/staff-dashboard.component';
 import { StaffLoginComponent } from './users/staff/staff-login/staff-login.component';
@@ -22,7 +23,8 @@ const routes: Routes = [
   { path: 'approver/managestaff', component: ManagestaffComponent},
   { path: 'staff/staffLogin', component: StaffLoginComponent},
   { path: 'staff/dashboard', component:StaffDashboardComponent}, 
-  { path: 'customer/registration', component: RegistrationComponent}
+  { path: 'customer/registration', component: RegistrationComponent},
+  { path: 'customer/dashboard', component: CustomerComponent}
   
 ];
 
