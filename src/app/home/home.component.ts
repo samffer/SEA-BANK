@@ -32,7 +32,7 @@ errMsg: any
         this.router.navigate(["/customer/dashboard"])
       }
         , error => {
-          console.log(error.error.message);
+          console.log(error);
           this.errMsg = error.error.message
         })
   }

@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" style="padding:2em 0 ;">
     <div class='card'>
         <div class='card-header'>
             <h1>Client Dash Board </h1>
@@ -260,55 +260,25 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <!-- <tr *ngFor="let user of users">
-                                            <th scope="row">#</th>
-                                            <td>{{ user.id }}</td>
-                                            <td>{{user.name }}</td>
-                                            <td>{{ user.phone}}</td>
-                                            <td>{{ user.email }}</td>
-                                           <td> <button class="btn btn-danger btn-rounded" (click)="deleteUser(user.id)"> Delete User</button></td>
-                                           
-                                        </tr> -->
-
-                                            <tr>
-
-
-                                                <td>001111111</td>
-                                                <td>USD: 3000</td>
-                                                <td>SB</td>
+                                            <tr *ngFor="let ac of accounts">
+                                                <!-- <th scope="row">#</th> -->
+                                                <td>#{{ ac.id }}</td>
+                                                <td>${{ac.balance }}</td>
                                                 <td>
-                                                    <div class="form-check">
-                                                        <input type="checkbox" class="form-check-input" id="Check1">
-                                                        <label class="form-check-label" for="exampleCheck1"></label>
-                                                    </div>
+                                                    <ng-template [ngIf]="ac.type=='SB'" [ngIfElse]="ca">
+                                                        <div>
+                                                            Savings Bank
+                                                        </div>
+                                                    </ng-template>
+
+                                                    <ng-template #ca>
+                                                        <div>
+                                                            Current Account
+                                                        </div>
+                                                    </ng-template>
                                                 </td>
-
-
-                                            </tr>
-                                            <tr>
-                                                <td>001111112</td>
-                                                <td>USD: 32000</td>
-                                                <td>SB</td>
-                                                <td>
-                                                    <div class="form-check">
-                                                        <input type="checkbox" class="form-check-input" id="Check1">
-                                                        <label class="form-check-label" for="exampleCheck1"></label>
-                                                    </div>
-                                                </td>
-
-
-                                            </tr>
-                                            <tr>
-
-                                                <td>001111113</td>
-                                                <td>USD: 45000</td>
-                                                <td>CA</td>
-                                                <td>
-                                                    <div class="form-check">
-                                                        <input type="checkbox" class="form-check-input" id="Check1">
-                                                        <label class="form-check-label" for="exampleCheck1"></label>
-                                                    </div>
-                                                </td>
+                                                <td>"TESTE"</td>
+                                                <!-- <td> <button class="btn btn-danger btn-rounded" (click)="deleteUser(user.id)"> Delete User</button></td> -->
                                             </tr>
                                         </tbody>
                                     </table>
@@ -355,60 +325,34 @@
                                                 <th>Account No</th>
                                                 <th>Balance</th>
                                                 <th>Acc. Type</th>
-                                                <th>Select</th>
+                                                <th>Status</th>
 
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <!-- <tr *ngFor="let user of users">
-                                            <th scope="row">#</th>
-                                            <td>{{ user.id }}</td>
-                                            <td>{{user.name }}</td>
-                                            <td>{{ user.phone}}</td>
-                                            <td>{{ user.email }}</td>
-                                           <td> <button class="btn btn-danger btn-rounded" (click)="deleteUser(user.id)"> Delete User</button></td>
-                                           
-                                        </tr> -->
-
-                                            <tr>
-
-
-                                                <td>001111111</td>
-                                                <td>USD: 3000</td>
-                                                <td>SB</td>
+                                            <tr *ngFor="let ac of accounts">
+                                                <!-- <th scope="row">#</th> -->
+                                                <td>#{{ ac.id }}</td>
+                                                <td>${{ac.balance }}</td>
                                                 <td>
-                                                    <div class="form-check">
-                                                        <input type="checkbox" class="form-check-input" id="Check1">
-                                                        <label class="form-check-label" for="exampleCheck1"></label>
-                                                    </div>
+                                                    <ng-template [ngIf]="ac.type=='SB'" [ngIfElse]="ca">
+                                                        <div>
+                                                            Savings Bank
+                                                        </div>
+                                                    </ng-template>
+
+                                                    <ng-template #ca>
+                                                        <div>
+                                                            Current Account
+                                                        </div>
+                                                    </ng-template>
                                                 </td>
-
-
-                                            </tr>
-                                            <tr>
-                                                <td>001111112</td>
-                                                <td>USD: 32000</td>
-                                                <td>SB</td>
                                                 <td>
-                                                    <div class="form-check">
-                                                        <input type="checkbox" class="form-check-input" id="Check1">
-                                                        <label class="form-check-label" for="exampleCheck1"></label>
-                                                    </div>
+                                                    
+                                                    <div *ngIf="ac.approved"><b style="color: chartreuse;">ACCOUNT APPROVED </b></div>
+                                                    <div *ngIf="!ac.approved"><b style="color: brown;"> ACCOUNT PENDING</b></div>
                                                 </td>
-
-
-                                            </tr>
-                                            <tr>
-
-                                                <td>001111113</td>
-                                                <td>USD: 45000</td>
-                                                <td>CA</td>
-                                                <td>
-                                                    <div class="form-check">
-                                                        <input type="checkbox" class="form-check-input" id="Check1">
-                                                        <label class="form-check-label" for="exampleCheck1"></label>
-                                                    </div>
-                                                </td>
+                                                <!-- <td> <button class="btn btn-danger btn-rounded" (click)="deleteUser(user.id)"> Delete User</button></td> -->
                                             </tr>
                                         </tbody>
                                     </table>

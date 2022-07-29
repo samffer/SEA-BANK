@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" style="padding:2em 0">
     <div class='card'>
         <div class='card-header'>
             <h1>Staff Dash Board</h1>
@@ -46,20 +46,54 @@
                     <div [ngSwitch]="num">
                         <div *ngSwitchCase="'1'">
                             <h1>Search account by Number</h1>
-                            <form class="container bordered">
+                            <form class="container bordered" [formGroup]="staffFindAccByIdForm" (ngSubmit)="submit()">
                                 <div class="form-group">
                                     <label for="inputnumbers"><a
                                             style="font-size: 19px;  text-underline-position: below; text-decoration: underline;">Enter account Number</a></label>
-                                    <input type="number" class="form-control" id="initialDeposit"
-                                        placeholder="#">
-                                    
+                                    <input type="number" class="form-control" id="initialDeposit" placeholder="0" formControlName="accId">
                                 </div>
-                                
-
                                 <button type="submit" class="btn btn-primary"
                                     style="margin-left: auto; margin-right: 0;">Submit</button>
+                                    <div style="color:Red ;">{{errMsg}}</div>
+                                    <table class="table table-hover"*ngIf="account.id>0">
+                                        <thead>
+                                            <tr>
+                                                <th>Account No</th>
+                                                <th>Balance</th>
+                                                <th>Acc. Type</th>
+                                                <th>Status</th>
 
-                            </form>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr >
+                                                <!-- <th scope="row">#</th> -->
+                                                <td>#{{ account.id }}</td>
+                                                <td>${{account.balance }}</td>
+                                                <td>
+                                                    <ng-template [ngIf]="account.type=='SB'" [ngIfElse]="ca">
+                                                        <div>
+                                                            Savings Bank
+                                                        </div>
+                                                    </ng-template>
+
+                                                    <ng-template #ca>
+                                                        <div>
+                                                            Current Account
+                                                        </div>
+                                                    </ng-template>
+                                                </td>
+                                                <td>
+                                                    
+                                                    <div *ngIf="account.approved"><b style="color: chartreuse;">ACCOUNT APPROVED </b></div>
+                                                    <div *ngIf="!account.approved"><b style="color: brown;"> ACCOUNT PENDING</b></div>
+                                                </td>
+                                                <!-- <td> <button class="btn btn-danger btn-rounded" (click)="deleteUser(user.id)"> Delete User</button></td> -->
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </form>
+                            
 
                         </div>
                         <div *ngSwitchCase="'2'">
@@ -77,7 +111,34 @@
                             <div class="container">
 
 
-                                <h4>Here is the list accounts to be approved:</h4>
+                                <h4>Here is the list of accounts to be approved:</h4>
+                                <table class="table table-success table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Customer</th>
+                                            <th>Balance</th>
+                                            <th>Account type</th>
+                                            <th>Enable/Disable</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let account of accounts">
+                                            <td>{{account.customerid}}</td>
+                                            <td>{{account.balance}}</td>
+                                            <td>{{account.type}}</td>
+
+                                            <td>
+                                                <div class="form-check form-switch">
+                                                    <form action="" #login="">
+                                                        <input class="form-check-input" type="checkbox" role="switch"
+                                                            id="flexSwitchCheckDefault" name="status" (click)="statusChange(account)"
+                                                            [(ngModel)]="account.approved">
+                                                    </form>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                                 
                             </div>
 
@@ -95,6 +156,23 @@
                         </div>
                         <div *ngSwitchDefault>
                             <h2>Staff duties</h2>
+                            <div class="container">
+                                <h3><ul>
+                                    <li>Search Account by Number</li>
+                                    <li>Approve Beneficiaries</li>
+                                    <li>Approve Accounts</li>
+                                    <li>Block and unblock accounts</li>
+                                </ul></h3>
+                                <br>
+                                <div class="card mb-3">
+                                    <img class="card-img-top" src="assets/chart.jpg" alt="Card image cap">
+                                    <div class="card-body">
+                                      <h5 class="card-title">Your productivity</h5>
+                                      <p class="card-text">This is your last preoductivity report.</p>
+                                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                    </div>
+                                  </div>
+                            </div>
                         </div>
                     </div>
 

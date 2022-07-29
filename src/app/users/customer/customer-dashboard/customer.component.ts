@@ -11,14 +11,17 @@ import { CustomerService } from '../customer.service';
   styleUrls: ['./customer.component.css']
 })
 export class CustomerComponent implements OnInit {
+  accounts: any;
 
   constructor(
     private customerservice: CustomerService,
     private router: Router
-    ) { }
+  ) { }
   public customer: Customer = new Customer;
   num: any;
   account: Account = new Account;
+  
+ 
 
   approverCreateStaffForm = new FormGroup({
     initialDeposit: new FormControl('', [Validators.required]),
@@ -31,15 +34,18 @@ export class CustomerComponent implements OnInit {
     this.account.type = this.f['accounttype'].value
     console.log(this.account)
     console.log(this.customer.id)
-    this.customerservice.createAccount(this.account, this.customer.id).subscribe(data => {
-      console.log(data)
-      this.num = '6'
-    }, err => {
+    this.customerservice.createAccount(this.account, this.customer.id).subscribe((data: any) => {
+      console.log(data);
+      this.getAll();
+      this.num = '6';
+    }, (err: any) => {
       console.log(err);
-      
+
     })
+  }
 
-
+  getAll(): void {
+    this.customerservice.getAllAccountsBtCustomerId(this.customer.id).subscribe((data: any) => { console.log(data); this.accounts=data })
   }
 
   get f() {
@@ -47,11 +53,13 @@ export class CustomerComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.customerservice.currentApprovalStageMessage.subscribe(msg => {
+    this.customerservice.currentApprovalStageMessage.subscribe((msg: any) => {
       //console.log(msg)
       this.customer = msg
+      this.getAll();
     })
-    console.log(this.customer)
+    
+    console.log("AQUI "+this.customer)
   }
 
 }

@@ -9,6 +9,10 @@ import { Customer } from './customer';
   providedIn: 'root'
 })
 export class CustomerService {
+
+  getAllAccountsBtCustomerId(id: any):Observable<object> {
+    return this.http.get<Account>(`${this.baseUrl}`+"/" + `${id}`+'/account')
+  }
   
   createAccount(account: Account, id: any):Observable<object> {
     
